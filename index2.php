@@ -28,6 +28,30 @@ echo '<br> Polo de couleur : ' . $polo->getColor() . ', comportant : ' . $polo->
 echo '<br> Twingo de couleur : ' . $twingo->getColor() . ', comportant : ' . $twingo->getNbSeats() . ' sièges' . '<br>';
    
 
+var_dump(Car::ALLOWED_ENERGIES);
+
+
+
+
+require_once "camion.php";
+
+$camion = new Truck ('Red', 2, 'fuel',100);
+    echo $camion->full(150). PHP_EOL;
+    
+    echo $camion->forward() . PHP_EOL;
+
+    echo $camion->brake();
+
+    var_dump($camion);
+
+    $gigaliner = new Truck ('Gray', 3, 'electric', 850);
+    echo $gigaliner->full(850). PHP_EOL;
+    
+    echo $gigaliner->forward() . PHP_EOL;
+
+    echo $gigaliner->brake();
+
+    var_dump($gigaliner);
 
 
     ?>
@@ -36,3 +60,5 @@ echo '<br> Twingo de couleur : ' . $twingo->getColor() . ', comportant : ' . $tw
 
 </body>
 </html>
+
+
