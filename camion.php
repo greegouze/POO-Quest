@@ -8,10 +8,21 @@ class Truck extends Vehicle
 
     protected int $loading = 0;
 
-    public function __construct(string $color, int $nbrSeats, string $typeEnergy, int $capacity)
+    protected string $energy;
+
+    public const ALLOWED_ENERGIES = [
+
+        'fuel',
+
+        'electric',
+
+    ];
+
+    public function __construct(string $color, int $nbrSeats, string $energy, int $capacity)
     {
-        parent::__construct($color, $nbrSeats, $typeEnergy);
+        parent::__construct($color, $nbrSeats);
         $this->capacity = $capacity;
+        $this->energy = $energy;
     }
 
     // Capacity Function
